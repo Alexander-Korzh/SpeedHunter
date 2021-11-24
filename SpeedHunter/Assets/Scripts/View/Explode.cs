@@ -1,16 +1,20 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Animations;
+
 
 public class Explode : MonoBehaviour
 {
+    #region Fields
 
     public Action ExplodeAction;
 
     [SerializeField] private SkinnedMeshRenderer enemyMesh;
     [SerializeField] private GameObject explodeGameObject;
 
+    #endregion
+
+    #region Methods
 
     //TODO:
     // Смотри TODO ниже
@@ -38,4 +42,7 @@ public class Explode : MonoBehaviour
         explodeGameObject.SetActive(false);
 
     }
+
+    #endregion
+
 }

@@ -53,38 +53,37 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Gloomy_Animal\Script\CharacterSelect.cs" />
-    <Compile Include="Assets\Free Pixel Art Hills\Demo\MoveBackground.cs" />
+    <Compile Include="Assets\Scripts\Controller\EnemyClicker.cs" />
+    <Compile Include="Assets\Scripts\Controller\BonusClicker.cs" />
+    <Compile Include="Assets\Scripts\Model\Background\MoveBackground.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\EnemyTransform.cs" />
-    <Compile Include="Assets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
-    <Compile Include="Assets\Scripts\Model\Mover.cs" />
+    <Compile Include="Assets\Scripts\Model\Gem\AnimationScript.cs" />
+    <Compile Include="Assets\Scripts\Model\Enemy\Move\Mover.cs" />
+    <Compile Include="Assets\Scripts\View\BonusSlider.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\EnemyCreator.cs" />
     <Compile Include="Assets\Scripts\Controller\Clicker.cs" />
-    <Compile Include="Assets\Scripts\Model\Score.cs" />
-    <Compile Include="Assets\Scripts\Model\Field.cs" />
+    <Compile Include="Assets\Scripts\Model\Logic\Score.cs" />
+    <Compile Include="Assets\Scripts\Model\Logic\Respawn\RespawnTrigger.cs" />
+    <Compile Include="Assets\Scripts\View\TimeLeftSlider.cs" />
+    <Compile Include="Assets\Scripts\Model\Logic\Enemies.cs" />
+    <Compile Include="Assets\Scripts\Model\Background\LoadBackground.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\EnemyMover.cs" />
-    <Compile Include="Assets\Scripts\Model\Respawn\Respawn.cs" />
+    <Compile Include="Assets\Scripts\Model\Logic\Respawn\Respawn.cs" />
+    <Compile Include="Assets\Scripts\View\ScoreCount.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\Transform\EnemyRotation.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\Transform\EnemyScale.cs" />
-    <Compile Include="Assets\Scripts\Model\Enemy\Prefabs.cs" />
-    <Compile Include="Assets\Scripts\Model\GameLogic.cs" />
-    <Compile Include="Assets\Scripts\Model\Enemy\Transform\EnemyPosition.cs" />
-    <Compile Include="Assets\Scripts\Model\IMove.cs" />
-    <Compile Include="Assets\Scripts\Controller\EnemyClicker.cs" />
-    <Compile Include="Assets\Scripts\View\ScoreCount.cs" />
+    <Compile Include="Assets\Scripts\Model\Prefabs.cs" />
+    <Compile Include="Assets\Scripts\Model\Logic\Bonus.cs" />
     <Compile Include="Assets\Scripts\View\Explode.cs" />
-    <Compile Include="Assets\Scripts\Model\Respawn\RespawnTrigger.cs" />
+    <Compile Include="Assets\Scripts\Model\Logic\GameLogic.cs" />
+    <Compile Include="Assets\Scripts\Model\Enemy\Transform\EnemyPosition.cs" />
+    <Compile Include="Assets\Scripts\Model\Enemy\Move\IMove.cs" />
     <Compile Include="Assets\Scripts\Controller\UnityClicker.cs" />
-    <Compile Include="Assets\Scripts\View\TimeLeftSlider.cs" />
-    <Compile Include="Assets\Scripts\Model\Bonus.cs" />
-    <Compile Include="Assets\Scripts\Controller\BonusClicker.cs" />
-    <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
-    <None Include="Assets\Free Pixel Art Hills\contact.txt" />
-    <None Include="Assets\Free Pixel Art Hills\Lisense.txt" />
-    <None Include="Assets\Free Pixel Art Hills\readme.txt" />
+    <Compile Include="Assets\Scripts\Model\Gem\GemsPool.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\BounceEffect.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\FadeEffect.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\FadeOut.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\FadeIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

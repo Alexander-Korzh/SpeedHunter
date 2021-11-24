@@ -1,13 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 
 public class BonusClicker : Clicker
 {
 
-    public void Start()
+    #region Fields
+
+    [SerializeField] private GameObject stars;
+    [SerializeField] private ParticleSystem starsParticleSystem;
+
+    #endregion
+
+    #region Methods
+
+    public void Awake()
     {
-        MouseDown += () => Score.AddByBonus();       
+
+        stars = GameObject.FindWithTag("Stars");
+
+        starsParticleSystem = stars.GetComponent<ParticleSystem>();
+
+        MouseDown += () =>
+        {
+            AttachStars();
+
+            starsParticleSystem.Play();
+
+            Score.AddByBonus();
+
+            GameLogic.AddSeconds();
+
+            gameObject.SetActive(false);
+        };
     }
+
+    private void AttachStars() => 
+        
+        stars.transform.position = gameObject.transform.position;
+
+    #endregion
+
 }

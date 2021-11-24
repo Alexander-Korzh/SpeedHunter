@@ -7,36 +7,44 @@ using UnityEngine;
 public class EnemyClicker : Clicker
 {
 
+    #region Fields
+
     [SerializeField] private Explode explodeInstance;
     [SerializeField] private Respawn respawnEnemy;
     [SerializeField] private Bonus bonusInstance;
 
- 
+    #endregion
+
+    #region Methods
+
     public void Start()
     {
+        
         respawnEnemy = 
             gameObject.transform.root.GetComponent<Respawn>();
 
         bonusInstance =
             gameObject.transform.root.GetComponent<Bonus>();
 
-        MouseDown += () => 
+        MouseDown += () =>
+        {
             bonusInstance.FillScale();
 
-        MouseDown += () =>
             explodeInstance.ExplodeAction.Invoke();
 
-        MouseDown += () => 
             StartCoroutine(
                 DelayBeforeRespawn(
                     () => respawnEnemy.DoAction(
                             gameObject, () => Score.AddByHit())));
+        };
+
     }
 
     //TODO:
-    // Эта корутина - костыль для добавления задержки в секунду
+    // Эта корутина - костыль для добавления задержки в 1 секунду
     // А задержка - время на сработку анимации взрыва
-    // Переделаю, когда познаю логику работы с аниматором в ExplodeAction и вытяну оттуда bool об окончании анимации
+    // Переделаю, когда познаю логику работы с аниматором в ExplodeAction и вытяну оттуда
+    // обратную связь об окончании анимации
     public IEnumerator DelayBeforeRespawn(Action actionAfterDelay)
     {
 
@@ -44,4 +52,7 @@ public class EnemyClicker : Clicker
 
         actionAfterDelay.Invoke();
     }
+
+    #endregion
+
 }

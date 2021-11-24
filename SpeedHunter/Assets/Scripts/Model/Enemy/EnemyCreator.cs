@@ -1,18 +1,23 @@
+
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 
 public class EnemyCreator : MonoBehaviour
 {
 
+    #region Fields
+
     [SerializeField] private EnemyTransform transformCreator;
     [SerializeField] private Prefabs creatures;
     [SerializeField] private Action IfEnemyHited;
-    //[SerializeField] private Score gameScore;
 
+    #endregion
+
+    #region Methods
 
     public void Start() =>
+        
         IfEnemyHited = () =>
             Score.AddByHit();
 
@@ -31,5 +36,9 @@ public class EnemyCreator : MonoBehaviour
         transformCreator.CreateRandom(enemy);
 
         return enemy;
+
     }
+
+    #endregion
+
 }
