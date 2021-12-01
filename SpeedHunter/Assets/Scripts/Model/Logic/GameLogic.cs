@@ -5,12 +5,13 @@ using UnityEngine.Events;
 
 public class GameLogic : MonoBehaviour
 {
+
     public const float SessionTime = 30;
     public bool PlayMode { get; private set; } = true;
     public static float TimeLeft { get; private set; } = SessionTime;
 
-    //TODO Инкапсулировать логику ивента рестарт в отдельный класс.
-    // А может, так как сделано сейчас, даже лучше? - разобраться
+
+    //TODO I think i should incapsulate this UnityEvent logic to another class.
     public UnityEvent Restart;
 
     #region Methods

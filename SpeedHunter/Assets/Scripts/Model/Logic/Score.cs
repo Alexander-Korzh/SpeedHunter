@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 
 
-//TODO Подкрутить модификаторы
+//TODO Modifiers requires attention
 public class Score : MonoBehaviour
 {
     public static int DefaultValue { get; private set; } = 10;

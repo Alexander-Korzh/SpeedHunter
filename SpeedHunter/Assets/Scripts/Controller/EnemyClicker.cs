@@ -40,11 +40,12 @@ public class EnemyClicker : Clicker
 
     }
 
+
     //TODO:
-    // Эта корутина - костыль для добавления задержки в 1 секунду
-    // А задержка - время на сработку анимации взрыва
-    // Переделаю, когда познаю логику работы с аниматором в ExplodeAction и вытяну оттуда
-    // обратную связь об окончании анимации
+    // This Coroutine - crutch to make delay for 1 seconds
+    // And that delay - is for doing explode animation
+    // I rebuild that when i will learn how to work with Animator in ExplodeAction and pull 
+    // feedback about ending of animation
     public IEnumerator DelayBeforeRespawn(Action actionAfterDelay)
     {
 

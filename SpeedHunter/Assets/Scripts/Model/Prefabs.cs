@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-//TODO Логику всего этого класса необходимо переделать на список, мешей а не геймобджектов
+//TODO Logic all of this class should rebuild with using List of Meshes, but not GameObjects
 public class Prefabs : MonoBehaviour
 {
 

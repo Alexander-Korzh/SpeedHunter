@@ -8,8 +8,7 @@ public class RespawnTrigger : MonoBehaviour
 
 
     public void OnTriggerEnter(Collider enemyCollider) => 
-        respawnEnemy.DoAction(
-            enemyCollider.gameObject, 
-            () => Score.DecreaseByMiss() );
+
+        respawnEnemy.DoAction( enemyCollider.gameObject, () => Score.DecreaseByMiss() );
 
 }

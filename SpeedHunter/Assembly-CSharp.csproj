@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,11 +53,18 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Controller\EnemyClicker.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\BounceEffect.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\FadeOut.cs" />
     <Compile Include="Assets\Scripts\Controller\BonusClicker.cs" />
     <Compile Include="Assets\Scripts\Model\Background\MoveBackground.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\EnemyTransform.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\FadeEffect.cs" />
     <Compile Include="Assets\Scripts\Model\Gem\AnimationScript.cs" />
+    <Compile Include="Assets\Scripts\View\Effects\FadeIn.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\Move\Mover.cs" />
     <Compile Include="Assets\Scripts\View\BonusSlider.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\EnemyCreator.cs" />
@@ -65,6 +72,7 @@
     <Compile Include="Assets\Scripts\Model\Logic\Score.cs" />
     <Compile Include="Assets\Scripts\Model\Logic\Respawn\RespawnTrigger.cs" />
     <Compile Include="Assets\Scripts\View\TimeLeftSlider.cs" />
+    <Compile Include="Assets\Scripts\Model\Gem\GemsPool.cs" />
     <Compile Include="Assets\Scripts\Model\Logic\Enemies.cs" />
     <Compile Include="Assets\Scripts\Model\Background\LoadBackground.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\EnemyMover.cs" />
@@ -79,11 +87,6 @@
     <Compile Include="Assets\Scripts\Model\Enemy\Transform\EnemyPosition.cs" />
     <Compile Include="Assets\Scripts\Model\Enemy\Move\IMove.cs" />
     <Compile Include="Assets\Scripts\Controller\UnityClicker.cs" />
-    <Compile Include="Assets\Scripts\Model\Gem\GemsPool.cs" />
-    <Compile Include="Assets\Scripts\View\Effects\BounceEffect.cs" />
-    <Compile Include="Assets\Scripts\View\Effects\FadeEffect.cs" />
-    <Compile Include="Assets\Scripts\View\Effects\FadeOut.cs" />
-    <Compile Include="Assets\Scripts\View\Effects\FadeIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

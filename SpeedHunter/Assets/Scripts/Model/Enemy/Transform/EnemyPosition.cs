@@ -6,7 +6,7 @@ public class EnemyPosition : MonoBehaviour
    
     #region Fields
 
-    //TODO Сделать привязку к размеру экрана
+    //TODO Make dependence to screen ( width an height )
     [SerializeField] private float  AbsXBehindTheScreen = 11;
     [SerializeField] private int    AbsMaxY             = 2;
     [SerializeField] private int    ZofEnemy            = 0;
