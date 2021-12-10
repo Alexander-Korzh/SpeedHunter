@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-
+/// <summary>
+/// Thats not mine, take it with Ggem pack.
+/// TODO Rewrite it
+/// </summary>
 public class AnimationScript : MonoBehaviour 
 {
 
